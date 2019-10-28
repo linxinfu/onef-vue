@@ -2,12 +2,12 @@
   <div class="login">
     <div class="login-box">
       <h2 class="project-name">
-        <strong>{{$t("app_name")}}</strong>
+        <strong>{{$t('app_name')}}</strong>
       </h2>
       <div class="login-detail">
         <div class="login-title">
-          <h3>Sign up now</h3>
-          <p>Enter your username and password to log on:</p>
+          <h3>{{$t('please_login')}}</h3>
+          <p>{{$t('enter_password_to_login')}}</p>
           <i class="el-icon-key"></i>
         </div>
         <div class="login-form">
@@ -53,15 +53,15 @@ export default {
   methods: {
     showTips () {
       this.notifyObj = this.$notify({
-        title: '提示',
-        message: '目前只有一个游客账号，账号为：user,密码都为：123456',
+        title: this.$i18n.t('notification'),
+        message: this.$i18n.t('login_notification'),
         duration: 3000,
         iconClass: 'el-icon-s-opportunity'
       })
     },
     login () {
       // TODO: 登录验证
-      this.$message({ message: '登陆成功', type: 'success' })
+      this.$message({ message: this.$i18n.t('login_success'), type: 'success' })
       console.log(this.loginInfo.username, this.loginInfo.password)
 
       this.$router.replace('/home')

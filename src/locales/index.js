@@ -20,7 +20,7 @@ const messages = {
 }
 
 const i18n = new VueI18n({
-  locale: 'en', // TODO: 从LocalStorage里读取当前语言配置
+  locale: 'zh', // TODO: 从LocalStorage里读取当前语言配置
   messages // set locale messages
 })
 

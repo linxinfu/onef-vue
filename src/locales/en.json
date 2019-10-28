@@ -1,3 +1,9 @@
 {
-  "app_name":"ONEF"
+  "app_name":"ONEF",
+  "login": "Login",
+  "login_success": "Success",
+  "please_login":"Sign up now",
+  "enter_password_to_login":"Enter your username and password to log on:",
+  "login_notification":"There is only one visitor account. username:user,   password:123456",
+  "notification":"Notification"
 }
