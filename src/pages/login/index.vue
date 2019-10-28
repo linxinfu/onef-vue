@@ -2,7 +2,7 @@
   <div class="login">
     <div class="login-box">
       <h2 class="project-name">
-        <strong>ONEF</strong>
+        <strong>{{$t("app_name")}}</strong>
       </h2>
       <div class="login-detail">
         <div class="login-title">
@@ -28,7 +28,7 @@
               ></el-input>
             </el-form-item>
             <el-form-item>
-              <el-button class="login-btn" type="primary" @click="login()">登录</el-button>
+              <el-button class="login-btn" type="primary" @click="login()">{{$t("login")}}</el-button>
             </el-form-item>
           </el-form>
         </div>
@@ -39,36 +39,35 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       loginInfo: {
-        username: "user",
-        password: "123456"
+        username: 'user',
+        password: '123456'
       }
-    };
+    }
   },
-  mounted() {
-    this.showTips();
+  mounted () {
+    this.showTips()
   },
   methods: {
-    showTips() {
+    showTips () {
       this.notifyObj = this.$notify({
-        title: "提示",
-        message:
-          "目前只有一个游客账号，账号为：user,密码都为：123456",
+        title: '提示',
+        message: '目前只有一个游客账号，账号为：user,密码都为：123456',
         duration: 3000,
-        iconClass: "el-icon-s-opportunity"
-      });
+        iconClass: 'el-icon-s-opportunity'
+      })
     },
-    login() {
-      // todo 登录验证
-      this.$message({ message: "登陆成功", type: "success" });
-      console.log(this.loginInfo.username,this.loginInfo.password);
+    login () {
+      // TODO: 登录验证
+      this.$message({ message: '登陆成功', type: 'success' })
+      console.log(this.loginInfo.username, this.loginInfo.password)
 
       this.$router.replace('/home')
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

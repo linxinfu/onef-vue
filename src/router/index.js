@@ -17,11 +17,11 @@ export default new Router({
     },
     {
       path: '/login',
-      component: () => import('@/pages/login/login')
+      component: () => import('@/pages/login')
     },
     {
       path: '/home',
-      component: () => import('@/pages/home/home')
+      component: () => import('@/pages/home')
     }
   ]
 })
