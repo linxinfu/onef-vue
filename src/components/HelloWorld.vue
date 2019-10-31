@@ -5,29 +5,25 @@
 </template>
 
 <script>
+import { mapActions,mapGetters } from 'vuex'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       message: 'Welcome to ONEF!'
     }
+  },
+  methods: {
+    ...mapActions(['saveUserInfo']),
+    ...mapGetters(['userInfo'])
+  },
+  mounted () {
+    this.saveUserInfo({username:"张三",phone:"234"})
+    var a = this.userInfo()
+    console.log(a.username,a.phone)
   }
 }
 </script>
 
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>

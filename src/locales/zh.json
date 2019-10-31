@@ -2,8 +2,8 @@
   "app_name": "ONEF",
   "login": "登录",
   "login_success": "登陆成功",
-  "please_login":"请登录",
-  "enter_password_to_login":"请输入账号和密码：",
-  "login_notification":"目前只有一个游客账号，账号为：user,密码都为：123456",
-  "notification":"提示"
+  "please_login": "请登录",
+  "enter_password_to_login": "请输入账号和密码：",
+  "login_notification": "目前只有一个游客账号，账号为：user,密码都为：123456",
+  "notification": "提示"
 }
