@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import { mapActions,mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
+import { login } from '@/api/user'
 export default {
   name: 'HelloWorld',
   data () {
@@ -15,12 +16,18 @@ export default {
   },
   methods: {
     ...mapActions(['saveUserInfo']),
-    ...mapGetters(['userInfo'])
+    ...mapGetters(['userInfo']),
+    requestTest () {
+      login("admin", "123456").then((it) => {
+        console.log(it)
+      })
+    }
   },
   mounted () {
-    this.saveUserInfo({username:"张三",phone:"234"})
+    this.saveUserInfo({ username: "张三", phone: "234" })
     var a = this.userInfo()
-    console.log(a.username,a.phone)
+    this.requestTest()
+    console.log(a.username, a.phone)
   }
 }
 </script>
