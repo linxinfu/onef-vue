@@ -10,21 +10,46 @@
         ONEF
       </a>
     </div>
-
-    <el-dropdown class="user-info">
-      <div>
-        <span>{{username}}</span>
+    <div class="user-wrap">
+      <el-dropdown class="language">
         <img
-          class="avatar-img"
-          src="./../../../assets/user/user01.jpg"
+          class="language-img"
+          src="@/assets/common/zh.svg"
         />
-      </div>
 
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item>个人中心</el-dropdown-item>
-        <el-dropdown-item>退出</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item>
+            <img
+              class="language-item-img"
+              src="@/assets/common/zh.svg"
+            />
+            <span>中文</span>
+          </el-dropdown-item>
+          <el-dropdown-item>
+            <img
+              class="language-item-img"
+              src="@/assets/common/en.svg"
+            />
+            <span>English</span>
+          </el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+
+      <el-dropdown class="user-info">
+        <div>
+          <span>{{username}}</span>
+          <img
+            class="avatar-img"
+            src="@/assets/user/user01.jpg"
+          />
+        </div>
+
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item>个人中心</el-dropdown-item>
+          <el-dropdown-item>退出</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+    </div>
   </div>
 </template>
 
@@ -51,6 +76,10 @@ export default {
   height: 50px;
   border-bottom: 1px solid #454b61;
 
+  .user-wrap {
+    float: right;
+  }
+
   .project-info {
     float: left;
     height: 50px;
@@ -74,24 +103,49 @@ export default {
     }
   }
 
+  .language {
+    width: 50px;
+    height: 50px;
+    padding: 0 20px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    .language-img {
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+  }
+
   .user-info {
-    float: right;
+    // float: right;
     padding-left: 10px;
     vertical-align: middle;
     cursor: pointer;
     text-align: center;
-    // height: 50px;
     line-height: 50px;
+  }
+  .user-info:hover {
+    background-color: #f6f8f8;
   }
 }
 
 .avatar-img {
-  // display: inline-block;
   width: 40px;
   height: 40px;
   margin-left: 10px;
   border-radius: 50%;
   margin-right: 20px;
   vertical-align: middle;
+}
+
+.language-item-img {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
 }
 </style>
