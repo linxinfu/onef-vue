@@ -1,11 +1,11 @@
-/* 
+/*
  *    侧边栏导航
  */
 
 <template>
   <div class="slide-menu-wrap">
     <el-menu
-      default-active="2"
+      default-active="1"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
@@ -57,7 +57,7 @@ export default {
 
 <style lang="scss" scoped>
 .slide-menu-wrap {
-  width: 200px;
+  width: 205px;
   height: calc(100% - 50px);
 }
 
