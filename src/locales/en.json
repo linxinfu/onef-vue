@@ -1,9 +1,20 @@
 {
-  "app_name":"ONEF",
+  "app_name": "ONEF",
   "login": "Login",
   "login_success": "Success",
-  "please_login":"Sign up now",
-  "enter_password_to_login":"Enter your username and password to log on:",
-  "login_notification":"There is only one visitor account. username:user,   password:123456",
-  "notification":"Notification"
+  "please_login": "Sign up now",
+  "enter_password_to_login": "Enter your username and password to log on:",
+  "login_notification": "There is only one visitor account. username:user,   password:123456",
+  "notification": "Notification",
+  "home": "HOME",
+  "links": "LINKS",
+  "user_settings": "SETTINGS",
+  "logout": "Logout",
+  "your_profile": "Your profile",
+  "repositories": "Repositories",
+  "general": "general",
+  "special": "special",
+  "logins": "Logins",
+  "telephone_cards": "Telephone Cards",
+  "credit_card": "Credit Cards"
 }

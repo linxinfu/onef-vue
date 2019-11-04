@@ -14,18 +14,18 @@
       <el-dropdown class="language">
         <img
           class="language-img"
-          src="@/assets/common/zh.svg"
+          :src="getLanguageUrl()"
         />
 
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>
+          <el-dropdown-item @click.native="changeLanguage('zh')">
             <img
               class="language-item-img"
               src="@/assets/common/zh.svg"
             />
-            <span>中文</span>
+            <span>简体中文</span>
           </el-dropdown-item>
-          <el-dropdown-item>
+          <el-dropdown-item @click.native="changeLanguage('en')">
             <img
               class="language-item-img"
               src="@/assets/common/en.svg"
@@ -45,8 +45,8 @@
         </div>
 
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>个人中心</el-dropdown-item>
-          <el-dropdown-item>退出</el-dropdown-item>
+          <el-dropdown-item>{{$t('your_profile')}}</el-dropdown-item>
+          <el-dropdown-item @click.native="logout()">{{$t('logout')}}</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -57,15 +57,22 @@
 export default {
   data () {
     return {
-      username: 'admin',
-      circleUrl: "./user01.jpg",
-      activeIndex: '1',
-      activeIndex2: '1'
+      username: 'Admin'
     };
   },
   methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath);
+    getLanguageUrl () {
+      return this.$i18n.locale == 'en' ? require('@/assets/common/en.svg') : require('@/assets/common/zh.svg')
+    },
+    changeLanguage (lang) {
+      if (this.$i18n.locale !== lang) {
+        this.$i18n.locale = lang
+        window.localStorage.setItem('lang', lang);
+      }
+    },
+    logout () {
+      // TODO: 清除登录信息
+      this.$router.replace('/login')
     }
   }
 }

@@ -5,5 +5,16 @@
   "please_login": "请登录",
   "enter_password_to_login": "请输入账号和密码：",
   "login_notification": "目前只有一个游客账号，账号为：user,密码都为：123456",
-  "notification": "提示"
+  "notification": "提示",
+  "home": "首页",
+  "links": "相关链接",
+  "user_settings": "个人设置",
+  "logout": "退出登录",
+  "your_profile": "个人中心",
+  "repositories": "密码库",
+  "general": "常用",
+  "special": "杂项",
+  "logins": "登录",
+  "telephone_cards": "电话卡",
+  "credit_card": "信用卡"
 }
