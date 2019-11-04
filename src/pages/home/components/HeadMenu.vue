@@ -11,6 +11,9 @@
       </a>
     </div>
     <div class="user-wrap">
+
+      <full-screen></full-screen>
+
       <el-dropdown class="language">
         <img
           class="language-img"
@@ -54,6 +57,7 @@
 </template>
 
 <script>
+import FullScreen from '@/components/FullScreen'
 export default {
   data () {
     return {
@@ -74,6 +78,9 @@ export default {
       // TODO: 清除登录信息
       this.$router.replace('/login')
     }
+  },
+  components: {
+    FullScreen
   }
 }
 </script>
@@ -113,7 +120,7 @@ export default {
   .language {
     width: 50px;
     height: 50px;
-    padding: 0 20px;
+    // padding: 0 20px;
     line-height: 50px;
     text-align: center;
     vertical-align: middle;
@@ -126,8 +133,11 @@ export default {
     }
   }
 
+  .language:hover {
+    background-color: #f6f8f8;
+  }
+
   .user-info {
-    // float: right;
     padding-left: 10px;
     vertical-align: middle;
     cursor: pointer;
