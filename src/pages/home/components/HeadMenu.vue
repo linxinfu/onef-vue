@@ -43,7 +43,7 @@
           <span>{{username}}</span>
           <img
             class="avatar-img"
-            src="@/assets/user/user01.jpg"
+            src="@/assets/user/man.jpg"
           />
         </div>
 
@@ -109,6 +109,7 @@ export default {
       line-height: 50px;
       img {
         height: 28px;
+        width: 28px;
         vertical-align: middle;
         margin-right: 8px;
         position: relative;

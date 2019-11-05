@@ -17,8 +17,8 @@ Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
   i18n,
+  router,
   store,
   components: { App },
   template: '<App/>'
